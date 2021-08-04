@@ -1,0 +1,29 @@
+<section id="container">
+    <div class="form-container">
+        <div class="top">
+            <h1 class="top__heading">Welcome</h1>
+            <p class="top__subheading">Already have an account? <a href="#">Log in</a></p>
+            <form id="sing-up" [formGroup]="registerForm" (ngSubmit)="submitData()" autocomplete="off">
+                <div class="input">
+                    <label for="email-address">Email Address</label>
+                    <input type="email" id="email-address" formControlName="email">
+                    <div class="input__indicator"></div>
+                </div>
+                <div class="name">
+                    <div class="input">
+                        <label for="first-name">Username</label>
+                        <input type="text" id="first-name" formControlName="username">
+                        <div class="input__indicator"></div>
+                    </div>
+                </div>
+                <div class="input">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" formControlName="password">
+                    <div class="input__indicator"></div>
+                </div>
+                <button type="submit">Create account</button>
+            </form>
+        </div>
+    </div>
+</section>
+<router-outlet></router-outlet>
